@@ -1,105 +1,123 @@
+/*typography*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+/*general body*/
 body {
 	font-family: 'Montserrat', sans-serif;
 	word-wrap: break-word;
 }
-.close-modal {
-	float:right;
-	margin: 2%;
-	font-size: 2em;
-	font-weight: 900;
-	cursor: pointer;
+
+/*containers*/
+.lightbox-container {
+	background-color: white;
+	vertical-align: middle;
+	margin: 0 auto;
+	margin-top: 10%;
+	width: 65%;
+	text-align: center;
+	max-width: 600px;
 }
-.close-modal::before{
-	content: '\00d7';
-	} 
-.modal-title {
+.one-third{
+		display: inline-block;
+		width: 32%;
+}
+.img-container {
+		height: 20%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 60%;
+}
+.heading-container {
+	padding-top: 3%;
+}
+
+/*titles + descriptions*/
+.lightbox-title {
 	color: #4A0832;
 }
-.modal-title, .modal-description {
+.lightbox-title, .lightbox-description {
 	text-transform: uppercase;
 	letter-spacing: -1.5px;
 }
 .promo-title, .promo-description {
 	margin: .5%;
 }
-.heading-container {
-	padding-top: 3%;
-}
+
+/*CTAs*/
 .best-rate, .cta-book-now {
 	padding: 2%;
 }
-	.cta-book-now {
-		background-color: #4A0832;
-		color: #ffffff;
-		width: 50%;
-		margin-top: 2%;
-		margin-right: auto;
-		margin-left: auto;
-		cursor: pointer;
-	}
-	.best-rate, .close-modal {
-		color: #808080;
-	}
-	.modal-container {
-		background-color: white;
-		vertical-align: middle;
-		margin: 0 auto;
-		margin-top: 10%;
-		width: 65%;
-		text-align: center;
-		max-width: 600px;
-	}
-	.one-third{
-		display: inline-block;
-		width: 32%;
-	}
-	.img-container {
-		height: 20%;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: 60%;
-	}
-	#starbucks {
-		background-image: url('http://iconshow.me/media/images/logo/brand-logo-icon/png/256/starbucks-256.png');
-	}
-	#united {
-		background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/United_Airlines_Logo.svg/1024px-United_Airlines_Logo.svg.png');
-	}
-	#gogo {
-		background-image: url('https://images.bwwstatic.com/columnpic6/52D678C5-FA6C-242C-A0A1CA6D6FF237D5.jpg');
-	}
-	.icon {
+.cta-book-now {
+	background-color: #4A0832;
+	color: #ffffff;
+	width: 50%;
+	margin-top: 2%;
+	margin-right: auto;
+	margin-left: auto;
+	cursor: pointer;
+}
+.best-rate, .close-lightbox {
+	color: #808080;
+}
+
+/*close lightbox*/
+.close-lightbox {
+	float:right;
+	margin: 2%;
+	font-size: 2em;
+	font-weight: 900;
+	cursor: pointer;
+}
+.close-lightbox::before{
+	content: '\00d7';
+	} 
+
+/*images + general class and specific backgrounds*/
+.icon {
 		max-width: 100%;
-	}
-	@media (max-height: 450px) {
-		.modal-container {
+}
+#starbucks {
+	background-image: url('http://iconshow.me/media/images/logo/brand-logo-icon/png/256/starbucks-256.png');
+}
+#united {
+		background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/United_Airlines_Logo.svg/1024px-United_Airlines_Logo.svg.png');
+}
+#gogo {
+	background-image: url('https://images.bwwstatic.com/columnpic6/52D678C5-FA6C-242C-A0A1CA6D6FF237D5.jpg');
+}
+
+/*breakpoints for mobile + tablet + landscape views*/
+
+/*landscape*/
+@media (max-height: 450px) {
+		.lightbox-container {
 			margin-top: 0;
 		}
-		.promo-title, .promo-description, .modal-title, .modal-description {
+		.promo-title, .promo-description, .lightbox-title, .lightbox-description {
 			margin: 1%;
 		}
+}
+/*mobile*/
+@media (max-width: 640px) {
+	.lightbox-container{
+		width: 300px;
 	}
-	@media (max-width: 640px) {
-		.modal-container{
-			width: 300px;
-		}
-		.one-third {
-			display: block;
-			width: 75%;
-			margin: 0 auto;
-		}
-		.promo-title, .promo-description, .modal-title, .modal-description {
-			margin: 1%;
-		}
-		.img-container {
-			height: 12.5%;
-			background-size: 45%;
-		}
+	.one-third {
+		display: block;
+		width: 75%;
+		margin: 0 auto;
 	}
-	@media (max-width:768px){
-			.modal-container{
+	.promo-title, .promo-description, .lightbox-title, .lightbox-description {
+		margin: 0;
+	}
+	.img-container {
+		height: 12.5%;
+		background-size: 45%;
+	}
+}
+/*tablet*/
+@media (max-width:768px){
+		.lightbox-container{
 				width: 65%;
 		}
 	}
